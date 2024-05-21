@@ -7,19 +7,50 @@ const buyButton = document.querySelector('.buy-btn');
 const cartItemsList = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
 const itemsGrid = document.querySelector('.items-grid');
-const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 
 let items = [
     {
         id: 1,
-        name: 'Apple',
-        price: 0.99,
+        name: 'iPhone15',
+        price: 929.99,
+        available: 2,
     },
     {
         id: 2,
-        name: 'Banana',
-        price: 10,
+        name: 'GalaxyS24',
+        price: 1019.99,
+        available: 1,
     },
+    {
+        id: 3,
+        name: 'iPad9',
+        price: 599.99,
+        available: 1,
+    },
+    {
+        id: 4,
+        name: 'WatchS9',
+        price: 499.99, 
+        available: 2, 
+    },
+    {
+        id: 5,
+        name: 'MxMaster3',
+        price: 129.99,  
+        available: 4,
+    },
+    {
+        id: 6,
+        name: 'LogiK380',
+        price: 49.99, 
+        available: 3,
+    },
+    {
+        id: 6,
+        name: 'AirPodsPro',
+        price: 274.99,  
+        available: 5,
+      },
 ];
 
 let cart = [];
@@ -52,3 +83,28 @@ fillItemsGrid();
 // Example of DOM methods for adding event handling
 cartButton.addEventListener('click', toggleModal);
 modalClose.addEventListener('click', toggleModal);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    addToCartButtons.forEach(function(button){
+        const itemId = button.getAttribute('data-id');
+        button.addEventListener("click", () => addItemToCart(itemId));
+    });
+});
+
+
+function addItemToCart(itemId) {
+    console.log(itemId)
+    var item = items.find(item => item.id == itemId);
+    if (item) {
+        if (item.available > 0) {
+            cart.push(item);
+            item.available--;
+            console.log(`${item.name} added to cart.`);
+        } else {
+            console.log(`${item.name} is currently out of stock.`);
+        }
+    } else {
+        console.log("Item not found. Type the command view to see all available items");
+    }
+}

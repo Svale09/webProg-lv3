@@ -10,163 +10,186 @@ const itemsGrid = document.querySelector(".items-grid");
 const toastMessage = document.getElementById("toastMessage");
 
 let items = [
-  {
-    id: 1,
-    name: "iPhone15",
-    price: 929.99,
-    available: 2,
-    category: "phones",
-  },
-  {
-    id: 2,
-    name: "GalaxyS24",
-    price: 1019.99,
-    available: 1,
-    category: "phones",
-  },
-  {
-    id: 3,
-    name: "iPad9",
-    price: 599.99,
-    available: 1,
-    category: "computers&laptops",
-  },
-  {
-    id: 4,
-    name: "WatchS9",
-    price: 499.99,
-    available: 2,
-    category: "phone_accesories",
-  },
-  {
-    id: 5,
-    name: "MxMaster3",
-    price: 129.99,
-    available: 4,
-    category: "computer_accesories",
-  },
-  {
-    id: 6,
-    name: "LogiK380",
-    price: 49.99,
-    available: 3,
-    category: "computer_accesories",
-  },
-  {
-    id: 7,
-    name: "AirPodsPro",
-    price: 274.99,
-    available: 5,
-    category: "phone_accesories",
-  },
-  {
-    id: 8,
-    name: "MacBook Pro 16",
-    price: 2499.99,
-    available: 2,
-    category: "computers&laptops",
-  },
-  {
-    id: 9,
-    name: "Surface Pro 9",
-    price: 899.99,
-    available: 3,
-    category: "computers&laptops",
-  },
-  {
-    id: 10,
-    name: "Pixel 7",
-    price: 699.99,
-    available: 4,
-    category: "phones",
-  },
-  {
-    id: 11,
-    name: "Sony WH-1000XM5",
-    price: 349.99,
-    available: 5,
-    category: "phone_accesories",
-  },
-  {
-    id: 12,
-    name: "Kindle Paperwhite",
-    price: 139.99,
-    available: 7,
-    category: "computers&laptops",
-  },
-  {
-    id: 13,
-    name: "Nintendo Switch OLED",
-    price: 349.99,
-    available: 3,
-    category: "computers&laptops",
-  },
-  {
-    id: 14,
-    name: "Razer DeathAdder V2",
-    price: 69.99,
-    available: 6,
-    category: "computer_accesories",
-  },
-  {
-    id: 15,
-    name: "Samsung 980 Pro SSD 1TB",
-    price: 149.99,
-    available: 4,
-    category: "computer_accesories",
-  },
-  {
-    id: 16,
-    name: "Dell XPS 13",
-    price: 999.99,
-    available: 2,
-    category: "computers&laptops",
-  },
-  {
-    id: 17,
-    name: "Google Nest Hub (2nd Gen)",
-    price: 99.99,
-    available: 3,
-    category: "computer_accesories",
-  },
-  {
-    id: 18,
-    name: "Samsung Galaxy Buds Pro",
-    price: 179.99,
-    available: 2,
-    category: "phone_accesories",
-  },
-  {
-    id: 19,
-    name: "Apple AirTag",
-    price: 29.99,
-    available: 10,
-    category: "phone_accesories",
-  },
-  {
-    id: 20,
-    name: "Sony PlayStation 5",
-    price: 499.99,
-    available: 1,
-    category: "computers&laptops",
-  },
-];
+    {
+      id: 1,
+      name: "iPhone15",
+      price: 929.99,
+      available: 2,
+      category: "phones",
+      imageUrl: "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg"
+    },
+    {
+      id: 2,
+      name: "GalaxyS24",
+      price: 1019.99,
+      available: 1,
+      category: "phones",
+      imageUrl: "https://www.links.hr/content/images/thumbs/019/0198948_smartphone-samsung-galaxy-s24-6-2-8gb-256gb-android-14-sivi-010301814.jpg"
+    },
+    {
+      id: 3,
+      name: "iPad9",
+      price: 599.99,
+      available: 1,
+      category: "computers&laptops",
+      imageUrl: ""
+    },
+    {
+      id: 4,
+      name: "WatchS9",
+      price: 499.99,
+      available: 2,
+      category: "phone_accesories",
+      imageUrl: ""
+    },
+    {
+      id: 5,
+      name: "MxMaster3",
+      price: 129.99,
+      available: 4,
+      category: "computer_accesories",
+      imageUrl: ""
+    },
+    {
+      id: 6,
+      name: "LogiK380",
+      price: 49.99,
+      available: 3,
+      category: "computer_accesories",
+      imageUrl: ""
+    },
+    {
+      id: 7,
+      name: "AirPodsPro",
+      price: 274.99,
+      available: 5,
+      category: "phone_accesories",
+      imageUrl: ""
+    },
+    {
+      id: 8,
+      name: "MacBook Pro 16",
+      price: 2499.99,
+      available: 2,
+      category: "computers&laptops",
+      imageUrl: ""
+    },
+    {
+      id: 9,
+      name: "Surface Pro 9",
+      price: 899.99,
+      available: 3,
+      category: "computers&laptops",
+      imageUrl: ""
+    },
+    {
+      id: 10,
+      name: "Pixel 7",
+      price: 699.99,
+      available: 4,
+      category: "phones",
+      imageUrl: ""
+    },
+    {
+      id: 11,
+      name: "Sony WH-1000XM5",
+      price: 349.99,
+      available: 5,
+      category: "phone_accesories",
+      imageUrl: ""
+    },
+    {
+      id: 12,
+      name: "Kindle Paperwhite",
+      price: 139.99,
+      available: 7,
+      category: "computers&laptops",
+      imageUrl: ""
+    },
+    {
+      id: 13,
+      name: "Nintendo Switch OLED",
+      price: 349.99,
+      available: 3,
+      category: "computers&laptops",
+      imageUrl: ""
+    },
+    {
+      id: 14,
+      name: "Razer DeathAdder V2",
+      price: 69.99,
+      available: 6,
+      category: "computer_accesories",
+      imageUrl: ""
+    },
+    {
+      id: 15,
+      name: "Samsung 980 Pro SSD 1TB",
+      price: 149.99,
+      available: 4,
+      category: "computer_accesories",
+      imageUrl: ""
+    },
+    {
+      id: 16,
+      name: "Dell XPS 13",
+      price: 999.99,
+      available: 2,
+      category: "computers&laptops",
+      imageUrl: ""
+    },
+    {
+      id: 17,
+      name: "Google Nest Hub (2nd Gen)",
+      price: 99.99,
+      available: 3,
+      category: "computer_accesories",
+      imageUrl: ""
+    },
+    {
+      id: 18,
+      name: "Samsung Galaxy Buds Pro",
+      price: 179.99,
+      available: 2,
+      category: "phone_accesories",
+      imageUrl: ""
+    },
+    {
+      id: 19,
+      name: "Apple AirTag",
+      price: 29.99,
+      available: 10,
+      category: "phone_accesories",
+      imageUrl: ""
+    },
+    {
+      id: 20,
+      name: "Sony PlayStation 5",
+      price: 499.99,
+      available: 1,
+      category: "computers&laptops",
+      imageUrl: ""
+    },
+  ];
+  
 
 let cart = [];
 
 function fillItemsGrid() {
-  for (const item of items) {
-    let itemElement = document.createElement("div");
-    itemElement.classList.add("item");
-    itemElement.innerHTML = `
-            <img src="https://picsum.photos/200/300?random=${item.id}" alt="${item.name}">
-            <h2>${item.name}</h2>
-            <p>$${item.price}</p>
-            <button class="add-to-cart-btn" data-id="${item.id}">Add to cart</button>
-        `;
-    itemsGrid.appendChild(itemElement);
+    for (const item of items) {
+      let itemElement = document.createElement("div");
+      itemElement.classList.add("item");
+      itemElement.innerHTML = `
+              <img src="${item.imageUrl}" alt="${item.name}" style="width: 13vw; height: 17vw;">
+              <h2>${item.name}</h2>
+              <p>$${item.price}</p>
+              <button class="add-to-cart-btn" data-id="${item.id}">Add to cart</button>
+          `;
+      itemsGrid.appendChild(itemElement);
+    }
   }
-}
+  
+  
 
 function toggleModal() {
   modal.classList.toggle("show-modal");

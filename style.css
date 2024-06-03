@@ -1,185 +1,221 @@
 /* CSS variables */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --font-size-base: 16px;
-    --font-family-base: Arial, sans-serif;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --font-size-base: 16px;
+  --font-family-base: Arial, sans-serif;
 }
 
 /* Global styles */
 body {
-    font-size: var(--font-size-base);
-    font-family: var(--font-family-base);
-    color: #333;
-    margin: 0;
-    padding: 2vw;
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  color: #333;
+  margin: 0vw;
+  padding: 0vw;
+  background-color: rgb(242, 242, 242);
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-top: 0;
+  font-size: 2.5em;
+  margin: 0;
 }
 
 #main-title {
-    text-align: center;
+  text-align: center;
 }
 
 h2 {
-    font-size: 1.5em;
-    margin-top: 0;
+  font-size: 1.5em;
+  margin-top: 0;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Header styles */
 .cart-button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 0.5em 1em;
-    font-size: 1.2em;
-    cursor: pointer;
+  background-color: white;
+  color: white;
+  border: 0.1vw solid darkgray;
+  border-radius: 0.5vw;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #333;
 }
 
 .cart-badge {
-    background-color: var(--secondary-color);
-    color: white;
-    border-radius: 50%;
-    padding: 0.2em 0.5em;
-    margin-left: 0.5em;
-    font-size: 0.8em;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 50%;
+  padding: 0.2em 0.5em;
+  margin-left: 0.5em;
+  font-size: 0.8em;
 }
 
 /* Items grid styles */
 .items-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1em;
-    margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1em;
+  margin-top: 1em;
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 1vw;
+  padding: 1em;
 }
 
 .item h2 {
-    margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 
 .item p {
-    font-size: 1.2em;
-    margin: 0.5em 0;
+  font-size: 1.2em;
+  margin: 0.5em 0;
 }
 
 .add-to-cart-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 0.5em 1em;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin-top: auto;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: auto;
 }
 
 /* Modal styles */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal.show-modal {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 
 .modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 1em;
-    border: 1px solid #ccc;
-    max-width: 600px;
+  background-color: white;
+  margin: 15% auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  max-width: 600px;
 }
 
 .close {
-    float: right;
-    font-size: 2em;
-    font-weight: bold;
-    cursor: pointer;
+  float: right;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .cart-items {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .cart-items li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
 }
 
 .cart-items li span {
-    margin-left: 0.5em;
+  margin-left: 0.5em;
 }
 
 .cart-total {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .remove-from-cart-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 0.5em;
-    font-size: 1em;
-    cursor: pointer;
-    margin-left: 1em;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 1em;
 }
 
 .buy-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 0.5em 1em;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin-top: 1em;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 1em;
 }
 
 .toast-message {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 9999;
-    display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #b9b3ae;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  display: none;
 }
 
 #sortSelect option[disabled] {
-    display: none;
+  display: none;
+}
+
+#title_and_cart {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw;
+  background-color: #333;
+  color: white;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+
+#main {
+  margin: 2vw;
+}
+
+#filter_and_select{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0.5vw;
+    border-bottom: 0.2vw solid #333;
+    align-items: center;
+    justify-content: end;
+}
+
+select{
+    margin-left: 1vw;
+    padding: 0.3vw;
+    border-radius: 0.4vw;
 }

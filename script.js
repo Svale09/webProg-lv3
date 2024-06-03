@@ -368,10 +368,12 @@ function filterItemsByCategory(category) {
     let itemElement = document.createElement("div");
     itemElement.classList.add("item");
     itemElement.innerHTML = `
-            <img src="https://picsum.photos/200/300?random=${item.id}" alt="${item.name}">
-            <h2>${item.name}</h2>
-            <p>$${item.price}</p>
-            <button class="add-to-cart-btn" data-id="${item.id}">Add to cart</button>
+            <div class="image-container">
+                  <img src="${item.imageUrl}" alt="${item.name}" class="item-image">
+              </div>
+              <h2>${item.name}</h2>
+              <p>$${item.price}</p>
+              <button class="add-to-cart-btn" data-id="${item.id}">Add to cart</button>
         `;
     itemsGrid.appendChild(itemElement);
   });

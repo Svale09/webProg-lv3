@@ -117,6 +117,7 @@ img {
   margin: 15% auto;
   padding: 1em;
   border: 1px solid #ccc;
+  border-radius: 1vw;
   max-width: 600px;
 }
 
@@ -162,11 +163,11 @@ img {
   background-color: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 3px;
+  border-radius: 0.5vw;
   padding: 0.5em 1em;
   font-size: 1.2em;
   cursor: pointer;
-  margin-top: 1em;
+  margin-left: 2vw;
 }
 
 .toast-message {
@@ -236,5 +237,26 @@ select{
     width: auto; /* Allow the image to adjust its width */
     height: auto; /* Allow the image to adjust its height */
   }
-  
+
+  .cart-item-details{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .quantity-controls{
+    width: 100%;
+    margin-left: 2vw;
+    align-items: center;
+    justify-content: space-evenly;
+  }  
+
+  #total{
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1vw;
+    border-top: 0.5vw solid #333;
+  }
   

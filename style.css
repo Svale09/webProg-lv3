@@ -20,7 +20,7 @@ h1 {
     margin-top: 0;
 }
 
-#main-title{
+#main-title {
     text-align: center;
 }
 
@@ -143,6 +143,17 @@ img {
 
 .cart-total {
     font-weight: bold;
+}
+
+.remove-from-cart-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 1em;
 }
 
 .buy-btn {

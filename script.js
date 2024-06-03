@@ -52,6 +52,84 @@ let items = [
         price: 274.99,
         available: 5,
     },
+    {
+        id: 8,
+        name: 'MacBook Pro 16',
+        price: 2499.99,
+        available: 2,
+    },
+    {
+        id: 9,
+        name: 'Surface Pro 9',
+        price: 899.99,
+        available: 3,
+    },
+    {
+        id: 10,
+        name: 'Pixel 7',
+        price: 699.99,
+        available: 4,
+    },
+    {
+        id: 11,
+        name: 'Sony WH-1000XM5',
+        price: 349.99,
+        available: 5,
+    },
+    {
+        id: 12,
+        name: 'Kindle Paperwhite',
+        price: 139.99,
+        available: 7,
+    },
+    {
+        id: 13,
+        name: 'Nintendo Switch OLED',
+        price: 349.99,
+        available: 3,
+    },
+    {
+        id: 14,
+        name: 'Razer DeathAdder V2',
+        price: 69.99,
+        available: 6,
+    },
+    {
+        id: 15,
+        name: 'Samsung 980 Pro SSD 1TB',
+        price: 149.99,
+        available: 4,
+    },
+    {
+        id: 16,
+        name: 'Dell XPS 13',
+        price: 999.99,
+        available: 2,
+    },
+    {
+        id: 17,
+        name: 'Google Nest Hub (2nd Gen)',
+        price: 99.99,
+        available: 3,
+    },
+    {
+        id: 18,
+        name: 'GoPro HERO11',
+        price: 399.99,
+        available: 2,
+    },
+    {
+        id: 19,
+        name: 'Apple AirTag',
+        price: 29.99,
+        available: 10,
+    },
+    {
+        id: 20,
+        name: 'Sony PlayStation 5',
+        price: 499.99,
+        available: 1,
+    }
 ];
 
 let cart = [];
@@ -89,14 +167,26 @@ function updateCartBadge() {
 function updateCart() {
     cartItemsList.innerHTML = '';
     let total = 0;
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
         let cartItem = document.createElement('li');
-        cartItem.textContent = `${item.name} - $${item.price}`;
+        cartItem.innerHTML = `
+            ${item.name} - $${item.price}
+            <button class="remove-from-cart-btn" data-index="${index}">Remove</button>
+        `;
         cartItemsList.appendChild(cartItem);
         total += item.price;
     });
     cartTotal.textContent = `$${total.toFixed(2)}`;
     updateCartBadge();
+
+    // Add event listeners to remove buttons
+    const removeButtons = document.querySelectorAll('.remove-from-cart-btn');
+    removeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const index = button.getAttribute('data-index');
+            removeItemFromCart(index);
+        });
+    });
 }
 
 function addItemToCart(itemId) {
@@ -113,6 +203,14 @@ function addItemToCart(itemId) {
     } else {
         showToast("Item not found.");
     }
+}
+
+function removeItemFromCart(index) {
+    const item = cart[index];
+    item.available++;
+    cart.splice(index, 1);
+    showToast(`${item.name} removed from cart.`);
+    updateCart();
 }
 
 fillItemsGrid();

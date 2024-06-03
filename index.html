@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Web Shop</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <h1 id="main-title">Web Shop</h1>
     <div class="cart-container">
-        <button class="cart-button">Cart <span class="cart-badge">0</span></button>
+      <button class="cart-button">
+        Cart <span class="cart-badge">0</span>
+      </button>
     </div>
 
-    <div class="items-grid">
-    </div>
+    <select id="sortSelect">
+      <option disabled selected>Sort by...</option>
+      <option value="priceLowToHigh">Price: Low to High</option>
+      <option value="priceHighToLow">Price: High to Low</option>
+      <option value="nameAToZ">Name: A to Z</option>
+      <option value="nameZToA">Name: Z to A</option>
+    </select>
+
+    <div class="items-grid"></div>
 
     <div class="modal">
       <div class="modal-content">

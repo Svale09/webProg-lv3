@@ -179,3 +179,7 @@ img {
     z-index: 9999;
     display: none;
 }
+
+#sortSelect option[disabled] {
+    display: none;
+}
